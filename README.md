@@ -30,20 +30,31 @@ HTML-CSS/
 └── Modulo 5/
 
 Cada pasta contém:
+
 📄 Material em PDF – Notas, resumos e explicações.
+
 💻 Códigos de prática – Exercícios para consolidar o aprendizado.
 
 🎯 Objetivo do Repositório
+
 Consolidar meu aprendizado autodidata em HTML e CSS.
+
 Criar uma referência pessoal para revisões futuras.
+
 Compartilhar conhecimento com outros estudantes ou curiosos em desenvolvimento web.
 
 🛠 Tecnologias e Ferramentas Utilizadas
+
 Tecnologia	Descrição
+
 HTML5	Estrutura de páginas web
+
 CSS3	Estilização e layout de páginas
+
 VSCode	Ambiente de desenvolvimento
+
 Markdown/PDF	Documentação e anotações
 
 📌 Nota Final
+
 Este repositório é um registro do meu progresso e aprendizado autodidata. É aberto para quem quiser se inspirar ou aprender, mas não substitui cursos formais ou material didático oficial.
