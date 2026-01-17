@@ -10,13 +10,21 @@ O material está organizado em 5 módulos, cada um com aulas divididas em pastas
 
 HTML-CSS/
 ├── Modulo 1/
+
 │   ├── Aula 1/
+
 │   │   ├── Material.pdf
+
 │   │   └── Codigo/
+
 │   │       ├── exercicio1.html
+
 │   │       └── exercicio1.css
+
 │   └── Aula 2/
+
 ├── Modulo 2/
+
 │   └── ...
 └── Modulo 5/
     └── ...
