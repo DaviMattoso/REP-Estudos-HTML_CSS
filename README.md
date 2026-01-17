@@ -25,7 +25,8 @@ HTML-CSS/
 
 ├── Modulo 2/
 
-│   └── ...
+│ 
+
 └── Modulo 5/
 
 Cada pasta contém:
