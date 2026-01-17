@@ -1,0 +1,405 @@
+/* =====================================================
+   RESET BÁSICO
+   Remove estilos padrão do navegador
+   ===================================================== */
+* {
+    margin: 0;                 /* Remove margens padrão */
+    padding: 0;                /* Remove espaçamentos padrão */
+    box-sizing: border-box;    /* Inclui padding/borda no tamanho */
+}
+
+/* =====================================================
+   BASE DO SITE
+   Afeta TODO o HTML
+   ===================================================== */
+body {
+    font-family: 'Inter', sans-serif; /* Fonte principal */
+    font-size: 16px;                  /* Tamanho base */
+    line-height: 1.6;                 /* Altura das linhas */
+    background-color: #ffffff;        /* Fundo branco */
+}
+
+/* Container padrão usado em várias seções */
+.container {
+    width: 90%;           /* Usa 90% da largura */
+    max-width: 1000px;    /* Limita largura máxima */
+    margin: auto;         /* Centraliza */
+}
+
+/* Classe utilitária para centralizar texto */
+.center {
+    text-align: center;
+}
+
+/* =====================================================
+   HEADER
+   <header class="header">
+   ===================================================== */
+.header {
+    background: #ffffff;          /* Fundo branco */
+    border-bottom: 1px solid #eee;/* Linha inferior */
+}
+
+.header {
+    position: fixed;          /* Fixa no topo */
+    top: 0;                   /* Começa no topo */
+    left: 0;
+    width: 100%;              /* Ocupa toda largura */
+    z-index: 9999;            /* Fica acima de tudo */
+    transition: top 0.3s ease; /* Animação suave */
+    background: #ffffff;      /* Fundo branco */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Pequena sombra */
+}
+
+/* Estrutura interna do header !! */
+.header-content {
+    display: flex;                  /* Layout flexível */
+    justify-content: space-between; /* Logo à esquerda, menu à direita */
+    align-items: center;            /* Centraliza verticalmente */
+    padding: 0;                     /* Espaço vertical */
+    gap: 20px;
+}
+
+/* Container do texto da marca */
+.logo-text {
+    display: flex;              /* Organiza os textos */
+    flex-direction: column;     /* Nome em cima, slogan embaixo */
+    justify-content: center;    /* Centraliza verticalmente */
+}
+
+/* Nome da empresa */
+.company-name {
+    font-size: 24px;            /* Tamanho do nome */
+    font-weight: 700;           /* Negrito */
+    line-height: 1.2;           /* Espaçamento entre linhas */
+    color: #1e3a8a;             /* Azul principal */
+    white-space: nowrap;        /* ⬅ Impede quebra de linha oque soluciona o problema do espaçamento entre logo e menu*/
+}
+
+/* Slogan da empresa */
+.company-tagline {
+    font-size: 14px;            /* Texto menor */
+    color: #6b7280;             /* Cinza */
+}
+
+/* Imagem do logo */
+.logo-img {
+    width: 120px;                 /* Largura fixa */
+    height: 120px;                /* Altura fixa */
+    object-fit: contain;          /* Mantém proporção */
+}
+
+/* Nome da empresa */
+.company-name {
+    color: #1e3a8a;               /* Azul da marca */
+    font-weight: 700;             /* Negrito */
+}
+
+/* Slogan da empresa */
+.company-tagline {
+    color: #6b7280;               /* Cinza */
+    font-size: 14px;              /* Texto menor */
+}
+
+/* 
+   NOTA:
+   Não existe estado "active" no menu.
+   Todos os links só mudam visualmente no :hover.
+   Isso garante comportamento uniforme e evita bugs.
+*/
+/* Definições de estilo dos botoes do header*/
+/* Container do menu */
+.nav {
+    display: flex;                 /* Links lado a lado */
+    gap: 20px;                     /* Espaço entre botões */
+    align-items: center;           /* Alinhamento vertical */
+}
+
+/* Links do menu – estado normal */
+.nav-btn {
+    background: transparent;      /* Botão sem fundo */
+    border: none;                 /* Remove borda padrão */
+    padding: 8px 14px;            /* Área clicável */
+    border-radius: 6px;           /* Cantos arredondados */
+    font-family: inherit;         /* Usa a fonte do site */
+    font-size: 16px;              /* Tamanho do texto */
+    color: #1f2937;               /* Cor padrão do texto */
+    cursor: pointer;              /* Cursor de clique */
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Hover dos botões do menu */
+.nav-btn:hover {
+    background-color: #f1f5f9;    /* Fundo cinza claro */
+    color: #ff6b35;               /* Texto laranja */
+    transform: translateY(-2px);  /* Leve subida */
+}
+
+/* =====================================================
+   BOTÕES
+   ===================================================== */
+.btn-primary,
+.btn-secondary,
+button {
+    cursor: pointer;              /* Cursor de mão */
+    transition: 0.3s;             /* Animação */
+    border-radius: 8px;           /* Bordas arredondadas */
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Botão principal (Portal de Locação)(laranja) */
+.btn-primary {
+    background: #ff6b35;
+    color: #ffffff;
+    padding: 12px 20px;
+}
+
+/* Hover botão principal */
+.btn-primary:hover {
+    background: #e85a28;
+    transform: translateY(-2px);
+}
+
+/* Botão secundário (azul) */
+.btn-secondary {
+    background: #1e3a8a;
+    color: #ffffff;
+    padding: 12px 20px;
+}
+
+/* Hover botão secundário */
+.btn-secondary:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   HERO
+   <section class="hero">
+   ===================================================== */
+.hero {
+    padding: 80px 0;              /* Espaçamento vertical */
+}
+
+/* Grid do hero */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;   /* Uma coluna no desktop */
+    gap: 40px;
+}
+
+/* Título principal */
+.hero h1 {
+    font-size: 48px;              /* Texto grande */
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 16px;
+}
+
+/* Palavra destacada */
+.hero h1 span {
+    color: #ff6b35;
+}
+
+/* Texto do hero */
+.hero p {
+    color: #4b5563;
+    font-size: 18px;
+    max-width: 520px;
+}
+
+/* =====================================================
+   BLOG
+   ===================================================== */
+.blog {
+    padding: 60px 0;
+}
+
+/* Título */
+.blog h2 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+/* Texto */
+.blog p {
+    color: #6b7280;
+}
+
+/* Filtros */
+.filters {
+    margin: 30px 0;
+}
+
+/* Botões dos filtros */
+.filters button {
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #ffffff;
+    color: #1f2937;
+}
+
+/* Hover filtros */
+.filters button:hover {
+    border-color: #ff6b35;
+    color: #ff6b35;
+}
+
+/* Filtro ativo */
+.filters .active {
+    border-color: #ff6b35;
+    color: #ff6b35;
+}
+
+/* Texto de carregamento */
+.loading {
+    margin-top: 40px;
+    color: #6b7280;
+}
+
+/* =====================================================
+   EQUIPAMENTOS
+   ===================================================== */
+.equipamentos {
+    padding: 80px 0;
+}
+
+/* Grid de cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+/* Card individual */
+.card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+/* Hover do card */
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* Título do card */
+.card h3 {
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+/* Texto do card */
+.card p {
+    color: #6b7280;
+}
+
+/* Card destacado */
+.highlight {
+    border: 2px solid #ff6b35;
+}
+
+/* =====================================================
+   RESPONSIVIDADE – TABLET
+   Até 1024px
+   ===================================================== */
+@media (max-width: 1024px) {
+
+    .header-content {
+        flex-direction: column;   /* Logo em cima, menu embaixo */
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;          /* Reduz título */
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+}
+
+/* =====================================================
+   RESPONSIVIDADE – MOBILE
+   Até 768px
+   ===================================================== */
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .header-content {
+        text-align: center;
+    }
+
+    .logo-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr; /* Um card por linha */
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =====================================================
+   RESPONSIVIDADE – MOBILE PEQUENO
+   Até 480px
+   ===================================================== */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 26px;          /* Título menor */
+    }
+
+    .company-tagline {
+        font-size: 12px;
+    }
+}

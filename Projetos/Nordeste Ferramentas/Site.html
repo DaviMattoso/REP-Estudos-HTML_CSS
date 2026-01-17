@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Essencial para RESPONSIVIDADE:
+         ajusta o layout à largura do dispositivo (mobile/tablet) -->
+    <meta name="description"
+          content="Equipamentos de qualidade para seu negócio. Blog com dicas, instruções e novidades sobre ferramentas e equipamentos.">
+    <!-- Descrição do site para Google (SEO) -->
+    <title>Nordeste Ferramentas</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon (ícone da aba) -->
+    <link rel="icon" href="Icon/Sgv/favicon-simple.svg">
+
+    <!-- Ícones (Font Awesome) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          rel="stylesheet">
+    <!-- Fonte Inter (Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <script src="script.js"></script>
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+<header class="header">
+    <!-- Cabeçalho principal do site -->
+
+    <div class="container header-content">
+        <!-- Container limita largura
+             header-content controla layout flex -->
+
+        <img src="images/logo.png"
+             alt="Nordeste Ferramentas"
+             class="logo-img">
+        <!-- Logo da empresa
+             .logo-img é estilizado no CSS -->
+
+        <div class="logo-text">
+            <!-- Agrupa nome e slogan -->
+
+            <h1 class="company-name">
+                Nordeste Ferramentas
+            </h1>
+            <!-- Nome da empresa
+                 Estilizado por .company-name -->
+
+            <p class="company-tagline">
+                Sua parceira em ferramentas e locação
+            </p>
+            <!-- Slogan
+                 Estilizado por .company-tagline -->
+        </div>
+
+
+        <!--
+         IMPORTANTE:
+         Não usamos a classe .active nos links do menu.
+         Todos os botões ficam neutros por padrão e
+         só recebem estilos quando o mouse passa (hover).
+         Isso evita estados visuais "presos" como o do inicio.
+        -->
+
+        <!--
+         FUTURO (NÃO IMPLEMENTADO AINDA):
+         Os links do menu (Início, Blog, Sobre, Contato)
+         serão conectados às seções da página usando âncoras:
+
+         Início   -> #hero
+         Blog     -> #blog
+         Sobre    -> #sobre
+         Contato  -> #contato
+ 
+         Cada seção do site receberá um atributo id
+         correspondente para permitir navegação por scroll.
+
+         Base de codigo no html:
+         <a href="#blog">Blog</a>
+         <section id="blog">...</section>
+
+          Quando todas as seções estiverem prontas,
+          o scroll será suave via CSS ou JavaScript.
+         -->
+
+        <nav class="nav">
+         <button class="nav-btn">Início</button>
+         <button class="nav-btn">Blog</button>
+         <button class="nav-btn">Sobre</button>
+         <button class="nav-btn">Contato</button>
+
+        <!-- Botão de acesso ao portal -->
+        <a href="login.html" target="_blank"> <!-- Link para login -->
+         <button class="btn-primary btn-portal" type="button">
+         <i class="fa-solid fa-right-from-bracket"></i>
+         <b>Portal de Locação</b>
+         </button>
+        </a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+<section class="hero">
+    <!-- Seção de destaque inicial -->
+
+    <div class="container hero-grid">
+        <!-- hero-grid controla layout -->
+
+        <div class="hero-text">
+            <!-- Agrupa texto do hero -->
+
+            <h1>
+                Equipamentos de <span>qualidade</span> para seu negócio
+            </h1>
+            <!-- Título principal
+                 span permite destacar uma palavra via CSS -->
+
+            <p>
+                Oferecemos as melhores ferramentas e equipamentos para
+                construção, manutenção e projetos industriais.
+            </p>
+            <!-- Texto descritivo -->
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     BLOG
+     ===================================================== -->
+<section class="blog">
+    <!-- Seção do blog -->
+
+    <div class="container center">
+        <!-- center centraliza textos -->
+
+        <h2>Blog - Dicas e Novidades</h2>
+        <!-- Título da seção -->
+
+        <p>
+            Fique por dentro das melhores práticas e novidades do mundo das ferramentas
+        </p>
+        <!-- Descrição -->
+
+        <div class="filters">
+            <!-- Filtros do blog -->
+
+            <button class="active">Todos</button>
+            <button>Dicas</button>
+            <button>Instruções</button>
+            <button>Equipamentos</button>
+            <button>Segurança</button>
+            <button>Manutenção</button>
+        </div>
+
+        <div class="loading">
+            Carregando posts...
+        </div>
+        <!-- Texto temporário -->
+    </div>
+</section>
+
+<!-- =====================================================
+     EQUIPAMENTOS
+     ===================================================== -->
+<section class="equipamentos">
+    <!-- Seção de produtos -->
+
+    <div class="container center">
+
+        <h2>Nossos Equipamentos</h2>
+        <p>Ferramentas e máquinas para todos os tipos de projeto</p>
+
+        <div class="cards">
+            <!-- Grid de cards -->
+
+            <div class="card">
+                <!-- Card individual -->
+                <div class="icon">🔨</div>
+                <h3>Ferramentas Manuais</h3>
+                <p>Martelos, chaves, alicates e muito mais</p>
+            </div>
+
+            <div class="card highlight">
+                <!-- Card em destaque -->
+                <div class="icon">⚙️</div>
+                <h3>Máquinas Elétricas</h3>
+                <p>Furadeiras, serras, lixadeiras profissionais</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🚚</div>
+                <h3>Equipamentos Pesados</h3>
+                <p>Betoneiras, compressores, geradores</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🛡️</div>
+                <h3>EPIs e Segurança</h3>
+                <p>Equipamentos de proteção individual</p>
+            </div>
+        </div>
+
+        <a class="btn-primary" href="#">
+            Ver Catálogo Completo
+        </a>
+        <!-- Botão CTA -->
+    </div>
+</section>
+
+<!-- =====================================================
+     SOBRE
+     ===================================================== -->
+<section class="sobre">
+    <!-- Seção institucional -->
+
+    <div class="container sobre-grid">
+        <!-- Grid da seção -->
+
+        <div>
+            <h2>Sobre a Nordeste Ferramentas</h2>
+
+            <p>
+                Somos uma empresa especializada em locação de ferramentas e
+                equipamentos para construção, manutenção e projetos industriais.
+            </p>
+
+            <ul>
+                <li>✔ Equipamentos de qualidade</li>
+                <li>✔ Suporte técnico especializado</li>
+                <li>✔ Entrega e retirada no local</li>
+                <li>✔ Preços competitivos</li>
+            </ul>
+
+            <a class="btn-secondary" href="#">
+                Fale Conosco
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     CONTATO
+     ===================================================== -->
+<section class="contato">
+    <!-- Seção de contato -->
+
+    <div class="container contato-grid">
+
+        <div class="info">
+            <!-- Informações da empresa -->
+
+            <h2>Entre em Contato</h2>
+            <p>Estamos aqui para ajudar com suas necessidades</p>
+
+            <p><strong>Telefone:</strong> (81) 99560-7222</p>
+            <p><strong>Email:</strong> contato@nordesteferramentas.com</p>
+            <p><strong>Endereço:</strong> Av. Barão de Souza Leão, 1496 - Recife/PE</p>
+            <p><strong>Horário:</strong> Seg a Sex 8h às 18h | Sáb 8h às 12h</p>
+        </div>
+
+        <form class="form">
+            <!-- Formulário -->
+
+            <input type="text" placeholder="Seu nome">
+            <input type="email" placeholder="Seu email">
+            <input type="text" placeholder="Seu telefone">
+
+            <select>
+                <option>Selecione o assunto</option>
+            </select>
+
+            <textarea placeholder="Sua mensagem"></textarea>
+
+            <button class="btn-primary">
+                Enviar Mensagem
+            </button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>

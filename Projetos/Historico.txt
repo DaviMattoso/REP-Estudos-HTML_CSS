@@ -1,0 +1,23 @@
+## Modificação do codigo base:
+
+Criação do arquivo html
+-> Divisao do site e comentarios para definição de partes
+
+Criação do arquivo css
+-> Edição das variaveis de cor definida (variação de cores definidas em cada clase)
+-> Modificação do body
+-> Resposividade e adaptação para mobile
+
+## Edição do site
+1º Tipos de arquivo
+Mudança do tipo de arquivo de icone (sgv para .ico) e adição do fivicon
+
+2º Header
+Mudança no tamanho e estilo do header
+Estilo dos botões do header
+ -> Correção no houver do "inicio"
+ -> Direcionamento para pagina de login no btn "Portal de Locação"
+Criar o codigo base apara o scroll rapido para cada botao com jvs (comentario)
+Sticky header com js
+
+
