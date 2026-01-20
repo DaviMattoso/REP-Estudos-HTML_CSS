@@ -19,6 +19,15 @@ body {
     background-color: #ffffff;        /* Fundo branco */
 }
 
+/* 
+   Compensa o header fixo
+   Evita que cubra o conteúdo da página
+*/
+body {
+    padding-top: 140px; /* valor inicial (desktop) */
+}
+
+
 /* Container padrão usado em várias seções */
 .container {
     width: 90%;           /* Usa 90% da largura */
@@ -36,18 +45,26 @@ body {
    <header class="header">
    ===================================================== */
 .header {
-    background: #ffffff;          /* Fundo branco */
     border-bottom: 1px solid #eee;/* Linha inferior */
+    position: fixed;          /* Fixa no topo */
+    top: 0;                   /* Começa no topo */
+    left: 0;
+    width: 100%;              /* Ocupa toda largura */
+    z-index: 9999;            /* Fica acima de tudo */
+    transition: top 0.3s ease; /* Animação suave */
+    background: #ffffff;      /* Fundo branco */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Pequena sombra */
 }
 
-/* Estrutura interna do header */
+/* Estrutura interna do header !! */
 .header-content {
-    display: flex;                /* Layout flexível */
-    justify-content: space-between;/* Logo à esquerda, menu à direita */
-    align-items: center;          /* Centraliza verticalmente */
-    padding: 20px 0;              /* Espaço vertical */
+    display: flex;                  /* Layout flexível */
+    justify-content: space-between; /* Logo à esquerda, menu à direita */
+    align-items: center;            /* Centraliza verticalmente */
+    padding: 20px 0;                /* Espaço vertical */
     gap: 20px;
 }
+
 /* Container do texto da marca */
 .logo-text {
     display: flex;              /* Organiza os textos */
@@ -72,15 +89,16 @@ body {
 
 /* Imagem do logo */
 .logo-img {
-    width: 120px;                 /* Largura fixa */
-    height: 120px;                /* Altura fixa */
-    object-fit: contain;          /* Mantém proporção */
+    width: 150px;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Nome da empresa */
 .company-name {
     color: #1e3a8a;               /* Azul da marca */
     font-weight: 700;             /* Negrito */
+    font-size: 22px;
 }
 
 /* Slogan da empresa */
@@ -170,7 +188,8 @@ button {
    <section class="hero">
    ===================================================== */
 .hero {
-    padding: 80px 0;              /* Espaçamento vertical */
+    padding: 80px;              /* Espaçamento vertical */
+    padding-bottom: 80px;
 }
 
 /* Grid do hero */
@@ -300,11 +319,40 @@ button {
    RESPONSIVIDADE – TABLET
    Até 1024px
    ===================================================== */
-@media (max-width: 1024px) {
+   /* Bloco da marca (logo + nome) */
+.brand {
+    display: flex;
+    align-items: center;   /* alinha verticalmente */
+    gap: 12px;             /* espaço entre logo e texto */
+}
+
+/* Logo */
+.logo-img {
+    width: 60px;           /* tamanho equilibrado */
+    height: auto;
+}
+
+/* Texto da marca */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1024px) {  /* MEDIA QUERIES */
+    .logo-img {
+    width: 56px;
+    }
+
+    .company-name {
+    font-size: 18px;
+    }
 
     .header-content {
-        flex-direction: column;   /* Logo em cima, menu embaixo */
-        gap: 20px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+       justify-content: space-between;
+       gap: 20px; 
     }
 
     .hero h1 {
@@ -322,19 +370,36 @@ button {
    ===================================================== */
 @media (max-width: 768px) {
 
-    .container {
-        width: 92%;
+    /* =====================================================
+       COMPENSAÇÃO DO HEADER FIXO (MOBILE)
+       ===================================================== */
+    body {
+        padding-top: 200px; /* Altura REAL do header no mobile */
     }
 
+    /* =====================================================
+       HEADER
+       ===================================================== */
     .header-content {
+        flex-direction: column;   /* Logo em cima, menu embaixo */
         text-align: center;
+        gap: 12px;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;       /* Logo ao lado do nome */
+        gap: 10px;
     }
 
     .logo-img {
-        width: 90px;
-        height: 90px;
+        width: 60px;              /* Logo proporcional no mobile */
+        height: auto;
     }
 
+    /* =====================================================
+       MENU
+       ===================================================== */
     .nav {
         display: flex;
         flex-wrap: wrap;
@@ -342,13 +407,23 @@ button {
         gap: 10px;
     }
 
-    .nav a {
-        margin: 0;
+    .nav-btn {
         font-size: 14px;
+        padding: 6px 12px;
     }
 
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* =====================================================
+       HERO
+       ===================================================== */
     .hero {
-        padding: 60px 0;
+        padding-top: 24px;        /* NÃO empurra mais o conteúdo */
+        padding-bottom: 60px;
     }
 
     .hero h1 {
@@ -360,6 +435,13 @@ button {
         font-size: 16px;
     }
 
+    /* =====================================================
+       OUTROS AJUSTES
+       ===================================================== */
+    .container {
+        width: 92%;
+    }
+
     .filters {
         display: flex;
         flex-wrap: wrap;
@@ -367,15 +449,10 @@ button {
     }
 
     .cards {
-        grid-template-columns: 1fr; /* Um card por linha */
-    }
-
-    .btn-primary,
-    .btn-secondary {
-        width: 100%;
-        text-align: center;
+        grid-template-columns: 1fr;
     }
 }
+
 
 /* =====================================================
    RESPONSIVIDADE – MOBILE PEQUENO

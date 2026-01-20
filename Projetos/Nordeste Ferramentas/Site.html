@@ -37,26 +37,23 @@
         <!-- Container limita largura
              header-content controla layout flex -->
 
-        <img src="images/logo.png"
-             alt="Nordeste Ferramentas"
-             class="logo-img">
-        <!-- Logo da empresa
-             .logo-img é estilizado no CSS -->
+        <!-- BLOCO DA MARCA (logo + nome + slogan) -->
+        <div class="brand">
+            <!-- Logo da empresa -->
+            <img src="images/logo.png"
+                 alt="Nordeste Ferramentas"
+                 class="logo-img">
 
-        <div class="logo-text">
-            <!-- Agrupa nome e slogan -->
+            <!-- Texto da marca -->
+            <div class="logo-text">
+                <h1 class="company-name">
+                    Nordeste Ferramentas
+                </h1>
 
-            <h1 class="company-name">
-                Nordeste Ferramentas
-            </h1>
-            <!-- Nome da empresa
-                 Estilizado por .company-name -->
-
-            <p class="company-tagline">
-                Sua parceira em ferramentas e locação
-            </p>
-            <!-- Slogan
-                 Estilizado por .company-tagline -->
+                <p class="company-tagline">
+                    Sua parceira em ferramentas e locação
+                </p>
+            </div>
         </div>
 
 
@@ -111,26 +108,44 @@
      HERO
      ===================================================== -->
 <section class="hero">
-    <!-- Seção de destaque inicial -->
-
     <div class="container hero-grid">
-        <!-- hero-grid controla layout -->
 
+        <!-- COLUNA ESQUERDA — TEXTO -->
         <div class="hero-text">
-            <!-- Agrupa texto do hero -->
-
             <h1>
                 Equipamentos de <span>qualidade</span> para seu negócio
             </h1>
-            <!-- Título principal
-                 span permite destacar uma palavra via CSS -->
 
             <p>
-                Oferecemos as melhores ferramentas e equipamentos para
-                construção, manutenção e projetos industriais.
+               Oferecemos as melhores ferramentas e equipamentos para construção,
+               manutenção e projetos industriais. Especialistas em aluguel e conserto,
+               entregamos qualidade, suporte técnico e dicas exclusivas para cada obra
+               no Nordeste.
             </p>
-            <!-- Texto descritivo -->
         </div>
+
+        <!-- COLUNA DIREITA — IMAGEM -->
+        <div class="hero-image">
+            <img 
+                src="images/Ferramentas web.png" 
+                alt="Equipe Nordeste Ferramentas">
+        </div>
+
+        <!-- BOTAÃO DO HERO -->
+         <div class="hero-butons">
+            <!-- Botão principal: Ver Equipamentos -->
+             <button class="btn-primary hero-btn">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                Ver Equipamentos
+             </button>
+
+             <!-- FUTURO:
+             Este botão levará à seção de equipamentos (#equipamentos)
+             quando a navegação por scroll for implementada com JS ou âncoras.
+             -->
+
+         </div>
+
     </div>
 </section>
 

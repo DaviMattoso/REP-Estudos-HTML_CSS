@@ -1,23 +1,264 @@
-## Modificação do codigo base:
+Diário de Desenvolvimento 
+(Dia 1)
 
-Criação do arquivo html
--> Divisao do site e comentarios para definição de partes
+Projeto: Nordeste Ferramentas
 
-Criação do arquivo css
--> Edição das variaveis de cor definida (variação de cores definidas em cada clase)
--> Modificação do body
--> Resposividade e adaptação para mobile
+-> Iniciar a estrutura do projeto e criar uma base sólida em **HTML + CSS**, já pensando em:
+- organização do código
+- responsividade
+- manutenção futura
+- evolução para JavaScript e backend
 
-## Edição do site
-1º Tipos de arquivo
-Mudança do tipo de arquivo de icone (sgv para .ico) e adição do fivicon
+1- Estrutura inicial do projeto
 
-2º Header
-Mudança no tamanho e estilo do header
-Estilo dos botões do header
- -> Correção no houver do "inicio"
- -> Direcionamento para pagina de login no btn "Portal de Locação"
-Criar o codigo base apara o scroll rapido para cada botao com jvs (comentario)
-Sticky header com js
+Criação do arquivo HTML
+- Criei o arquivo HTML base do site
+- Dividi o site em seções bem definidas (`header`, `hero`, `blog`, `equipamentos`, `sobre`, `contato`)
+- Adicionei comentários detalhados para identificar claramente cada parte da página
+- Preparei a estrutura pensando em navegação futura por scroll (âncoras)
+
+Criação do arquivo CSS
+- Criei o arquivo CSS principal do projeto
+- Iniciei com um **reset básico** para evitar comportamentos padrão do navegador
+- Testei e ajustei o `body` (fonte, tamanho base, line-height)
+- Trabalhei a responsividade desde o início, evitando deixar isso para depois
+
+Cores e identidade visual
+- Analisei o CSS original do site
+- Removi a dependência excessiva de variáveis globais de cor
+- Passei a definir cores **por seção e por componente**, facilitando ajustes futuros
+- Mantive a paleta principal (azul + laranja) como identidade do projeto
+
+2- Edições funcionais no site
+-> Tipos de arquivo
+- Alterei o formato do ícone do site de `.svg` para `.ico`
+- Adicionei corretamente o favicon no `<head>` do HTML
+- Garantia de compatibilidade com navegadores
+
+3- Header (parte mais trabalhada do dia)
+-> Estrutura e layout
+- Ajustei o tamanho e o estilo do header
+- Reestruturei o HTML para agrupar corretamente:
+  - logo
+  - nome da empresa
+  - slogan
+- Corrigi problemas de alinhamento no desktop e no mobile
+
+-> Botões do header
+- Estilizei todos os botões como **botões reais**, não links de navegação
+- Criei animações de hover:
+  - mudança de cor
+  - leve elevação (`translateY`)
+- Corrigi um bug onde o botão **“Início” ficava com hover permanente**
+
+-> Botão “Portal de Locação”
+- Mantive o botão com:
+  - texto branco
+  - fonte em negrito
+- Adicionei ícone com Font Awesome
+- Configurei o botão para abrir **uma nova página (`login.html`)**
+- Estrutura preparada para no futuro:
+  - sistema de login
+  - integração com backend e banco de dados
+
+!! Navegação futura (comentada no código)
+- Criei comentários explicando como será implementado:
+  - scroll automático para cada seção
+  - uso de âncoras (`#hero`, `#blog`, etc.)
+  - possível scroll suave via CSS ou JavaScript
+
+4- Header fixo (sticky)
+- Transformei o header em `position: fixed`
+- Corrigi todos os problemas de sobreposição com o conteúdo
+- Aprendi e documentei a compensação correta usando `padding-top` no `body`
+- Ajustei valores específicos para desktop e mobile via media queries
+
+5- Responsividade
+- Adaptei o layout para:
+  - desktop
+  - tablet
+  - mobile
+- Ajustei tamanho do logo no mobile
+- Corrigi espaçamentos quebrados no header
+- Garanti que o header não cubra o hero em nenhuma resolução
+
+6- Aprendizados do dia
+- Header fixo exige compensação no `body`
+- Estrutura HTML bem feita evita 90% dos bugs de layout
+- Media queries precisam ser organizadas e sem duplicação
+- Resolver responsividade no início economiza MUITO tempo depois
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+(Dia 2)
+
+Nota Técnica — Ajustes do Header (Desktop e Mobile)
+Objetivo
+O objetivo dessa etapa foi construir um header fixo, responsivo e estável, garantindo que:
+- o header não cubra o conteúdo (hero)
+- não existam espaços em branco gigantes
+- o layout funcione corretamente no desktop e no mobile
+- o código fique limpo e previsível, sem gambiarras
+
+Problemas encontrados:
+
+1- Header fixo cobrindo o hero
+O header usa `position: fixed`, o que remove ele do fluxo normal da página.  
+Com isso, o conteúdo (hero) acabava ficando “por baixo” do header.
+
+2- Espaçamentos inconsistentes
+Foram identificados vários problemas de espaçamento:
+
+- `padding-top` duplicado no `body`
+- `padding` duplicado no `.hero`
+- valores muito altos (ex: `250px`) no mobile
+- regras se sobrescrevendo dentro do mesmo `@media`
+
+Isso causava comportamentos imprevisíveis:
+- em tela cheia ficava errado
+- em meia tela ficava certo
+- no mobile quebrava tudo
+
+3- Logo quebrando o layout no mobile
+O logo estava:
+- fora de um agrupamento lógico
+- posicionado "acima" do nome da empresa
+- deixando o header muito alto no mobile
+
+Resultado: layout “tronxo” e difícil de controlar.
+
+4- Media queries desorganizadas
+Havia:
+- regras repetidas dentro do mesmo `@media`
+- propriedades iguais definidas várias vezes
+- dificuldade de entender qual regra realmente estava ativa
+
+Soluções aplicadas:
+->Estrutura correta do header
+Criei um agrupamento lógico para a marca:
+- logo
+- nome da empresa
+- slogan
+
+O logo passou a ficar "ao lado do nome", tanto no desktop quanto no mobile.  
+Isso reduziu a altura do header e estabilizou o layout.
+
+Compensação correta do header fixo
+Mantive o header como `position: fixed`, mas corrigi a compensação:
+```css
+body {
+    padding-top: <altura real do header>;
+}
+
+6- Começando a fazer o Hero
+-> Objetivos:
+  1º - Organizar o texto do hero
+  2º - Adicionar a img da equipe
+
+1- Estrutura do HERO
+- O hero foi dividido visualmente em duas áreas:
+  - Lado esquerdo: conteúdo textual (título e descrição)
+  - Lado direito: imagem institucional / conceitual
+
+- A estrutura foi pensada para:
+  - Desktop → layout em duas colunas
+  - Mobile → layout empilhado (texto em cima, imagem embaixo)
+
+2- Texto do HERO
+Título (`<h1>`)
+- Mantido o texto principal:
+  “Equipamentos de qualidade para seu negócio”
+- A palavra “qualidade” permanece destacada visualmente para reforçar o valor da marca.
+
+3- Parágrafo (`<p>`)
+- O texto original foi reescrito e adaptado, misturando:
+  - Linguagem profissional
+  - Referência ao aluguel e conserto de ferramentas
+  - Identidade regional do Nordeste (sem exagero ou caricatura)
+
+- Resultado:
+  - Texto mais curto
+  - Direto
+  - Comercial
+  - Com personalidade regional
+
+3- Botão “Ver Equipamentos”
+
+- Foi criado o botão “Ver Equipamentos” no hero, seguindo o padrão visual do site principal.
+- Função planejada:
+  - Levar o usuário diretamente à seção de equipamentos da página.
+  OBS:  
+  O comportamento do botão **não foi implementado ainda**, pois a seção de equipamentos será desenvolvida depois.
+- Foi deixada nota no código para voltar e conectar esse botão futuramente (âncora ou JS).
+- O botão de acesso ao portal foi retirado porque ja existe um no Header
+
+4 - Imagem do HERO
+- A imagem é momentanea e vai ser editada, mas um chapeu do cangaço na parafusadeira é genial
+
+5- Responsividade do HERO
+
+- O hero foi ajustado para funcionar corretamente em:
+  - Desktop
+  - Tablet
+  - Mobile
+- Correções feitas para:
+  - Evitar que o header cubra o conteúdo
+  - Eliminar espaços em branco excessivos
+  - Garantir boa leitura no mobile
+
+6- Resultado Final
+
+- Hero limpo, profissional e com identidade
+- Texto claro e comercial
+- Imagem com conceito próprio
+- Base pronta para:
+  - Animações futuras
+  - Ajustes finos de layout
+  - Integração com outras seções
+
+!! Observação para o futuro
+- Voltar ao botão “Ver Equipamentos” após a criação da seção de ferramentas.
+- Possível melhoria futura:
+  - Pequena animação na imagem
+  - Scroll suave ao clicar no botão
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

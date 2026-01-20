@@ -24,6 +24,9 @@
 </head>
 
 <body>
+
+    <script src="script.js"></script>
+
 <!-- =====================================================
      HEADER
      ===================================================== -->
@@ -34,26 +37,23 @@
         <!-- Container limita largura
              header-content controla layout flex -->
 
-        <img src="images/logo.png"
-             alt="Nordeste Ferramentas"
-             class="logo-img">
-        <!-- Logo da empresa
-             .logo-img é estilizado no CSS -->
+        <!-- BLOCO DA MARCA (logo + nome + slogan) -->
+        <div class="brand">
+            <!-- Logo da empresa -->
+            <img src="images/logo.png"
+                 alt="Nordeste Ferramentas"
+                 class="logo-img">
 
-        <div class="logo-text">
-            <!-- Agrupa nome e slogan -->
+            <!-- Texto da marca -->
+            <div class="logo-text">
+                <h1 class="company-name">
+                    Nordeste Ferramentas
+                </h1>
 
-            <h1 class="company-name">
-                Nordeste Ferramentas
-            </h1>
-            <!-- Nome da empresa
-                 Estilizado por .company-name -->
-
-            <p class="company-tagline">
-                Sua parceira em ferramentas e locação
-            </p>
-            <!-- Slogan
-                 Estilizado por .company-tagline -->
+                <p class="company-tagline">
+                    Sua parceira em ferramentas e locação
+                </p>
+            </div>
         </div>
 
 
