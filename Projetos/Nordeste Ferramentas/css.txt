@@ -900,6 +900,23 @@ button {
     border: 2px solid #000000;   /* padrão do site */
     }
 
+    .blog-actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .blog-btn {
+        width: 100%;
+        max-width: 280px; /* mesmo padrão do botão catálogo */
+        text-align: center;
+        justify-content: center;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
     /* =====================================================
     FERRAMENTAS – MOBILE
     ===================================================== */
@@ -1095,7 +1112,6 @@ button {
         padding-top: 15px;
         font-size: 13px;
     }
-}
 
     /* =====================================================
        OUTROS AJUSTES
