@@ -152,156 +152,339 @@
 <!-- =====================================================
      BLOG
      ===================================================== -->
-<section class="blog">
-    <!-- Seção do blog -->
+<!-- =====================================================
+     BLOG
+     ===================================================== -->
+<div class="blog">
+    <h1>Nordeste Ferramentas Blog</h1>
 
-    <div class="container center">
-        <!-- center centraliza textos -->
+    <div class="blog_box">
 
-        <h2>Blog - Dicas e Novidades</h2>
-        <!-- Título da seção -->
-
-        <p>
-            Fique por dentro das melhores práticas e novidades do mundo das ferramentas
-        </p>
-        <!-- Descrição -->
-
-        <div class="filters">
-            <!-- Filtros do blog -->
-
-            <button class="active">Todos</button>
-            <button>Dicas</button>
-            <button>Instruções</button>
-            <button>Equipamentos</button>
-            <button>Segurança</button>
-            <button>Manutenção</button>
+        <div class="blog_card">
+            <div class="blog_img">
+                <img src="images/Blog_img_1.png">
+            </div>
+            <div class="blog_tag">
+                <h2>
+                    <a href="blog.html" target="_blank">
+                        Como escolher a ferramenta certa para cada tipo de obra
+                    </a>
+                </h2>
+                <p>
+                    Cada obra tem sua própria exigência, e usar a ferramenta certa faz toda a diferença no resultado final.
+                    Seja madeira, concreto ou manutenção geral, escolher o equipamento adequado garante mais segurança,
+                    eficiência e economia no trabalho.
+                </p>
+                <div class="blog_icon">
+                    <i class="fa-solid fa-calendar"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
         </div>
 
-        <div class="loading">
-            Carregando posts...
+        <div class="blog_card">
+            <div class="blog_img">
+                <img src="images/Blog_img_2.png">
+            </div>
+            <div class="blog_tag">
+                <h2>
+                    <a href="blog.html" target="_blank">
+                        Ferramentas essenciais para construção civil
+                    </a>
+                </h2>
+                <p>
+                    Na construção civil, produtividade e resistência caminham juntas. Conhecer as ferramentas essenciais
+                    para cada etapa da obra ajuda a evitar improvisos, reduzir erros e manter o ritmo do serviço do começo ao fim.
+                </p>
+                <div class="blog_icon">
+                    <i class="fa-solid fa-calendar"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
         </div>
-        <!-- Texto temporário -->
+
+        <div class="blog_card">
+            <div class="blog_img">
+                <img src="images/Blog_img_3.png">
+            </div>
+            <div class="blog_tag">
+                <h2>
+                    <a href="blog.html" target="_blank">
+                        Diferença entre ferramentas profissionais e domésticas
+                    </a>
+                </h2>
+                <p>
+                    Nem toda ferramenta é feita para uso intenso. Entender a diferença entre ferramentas profissionais
+                    e domésticas evita desgaste prematuro, aumenta a durabilidade dos equipamentos e garante um trabalho
+                    bem feito, seja em pequenos reparos ou grandes projetos.
+                </p>
+                <div class="blog_icon">
+                    <i class="fa-solid fa-calendar"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+        </div>
+
     </div>
-</section>
+
+    <!-- BOTÃO FORA DO GRID -->
+    <div class="blog-actions">
+        <a href="blog.html" target="_blank" class="btn btn-primary blog-btn">
+            <i class="fa-solid fa-blog"></i>
+            Ver todos os posts
+        </a>
+    </div>
+
+</div>
+
 
 <!-- =====================================================
      EQUIPAMENTOS
      ===================================================== -->
-<section class="equipamentos">
-    <!-- Seção de produtos -->
-
-    <div class="container center">
-
-        <h2>Nossos Equipamentos</h2>
-        <p>Ferramentas e máquinas para todos os tipos de projeto</p>
-
-        <div class="cards">
-            <!-- Grid de cards -->
-
-            <div class="card">
-                <!-- Card individual -->
-                <div class="icon">🔨</div>
-                <h3>Ferramentas Manuais</h3>
-                <p>Martelos, chaves, alicates e muito mais</p>
+    <section class="equipamentos" id="equipamentos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Equipamentos</h2>
+                <p class="section-subtitle">Ferramentas e máquinas para todos os tipos de projeto</p>
             </div>
-
-            <div class="card highlight">
-                <!-- Card em destaque -->
-                <div class="icon">⚙️</div>
-                <h3>Máquinas Elétricas</h3>
-                <p>Furadeiras, serras, lixadeiras profissionais</p>
+            
+            <div class="equipamentos-grid">
+                <div class="equipamento-card">
+                    <div class="equipamento-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Ferramentas Manuais</h3>
+                    <p>Martelos, chaves, alicates e muito mais</p>
+                </div>
+                
+                <div class="equipamento-card">
+                    <div class="equipamento-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Máquinas Elétricas</h3>
+                    <p>Furadeiras, serras, lixadeiras profissionais</p>
+                </div>
+                
+                <div class="equipamento-card">
+                    <div class="equipamento-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Equipamentos Pesados</h3>
+                    <p>Betoneiras, compressores, geradores</p>
+                </div>
+                
+                <div class="equipamento-card">
+                    <div class="equipamento-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>EPIs e Segurança</h3>
+                    <p>Equipamentos de proteção individual</p>
+                </div>
             </div>
+            
+       <!-- 
+        FUTURO (NÃO IMPLEMENTADO AINDA):
+        Este botão será usado para BAIXAR automaticamente
+        o catálogo de ferramentas da empresa (PDF ou outro formato).
 
-            <div class="card">
-                <div class="icon">🚚</div>
-                <h3>Equipamentos Pesados</h3>
-                <p>Betoneiras, compressores, geradores</p>
-            </div>
+        Quando o catálogo estiver pronto:
+        1. Colocar o arquivo dentro da pasta do projeto (ex: /catalogo/)
+        2. Atualizar o atributo href com o caminho correto
+        3. O atributo 'download' força o navegador a baixar o arquivo
+        
+        Exemplo final esperado:
+        href="catalogo/catalogo-nordeste-ferramentas.pdf"
+        -->
 
-            <div class="card">
-                <div class="icon">🛡️</div>
-                <h3>EPIs e Segurança</h3>
-                <p>Equipamentos de proteção individual</p>
+            <div class="equipamentos-actions">
+                <a href="portal/" class="btn btn-primary">
+                    <i class="fas fa-search"></i>
+                    Ver Catálogo Completo
+                </a>
             </div>
         </div>
-
-        <a class="btn-primary" href="#">
-            Ver Catálogo Completo
-        </a>
-        <!-- Botão CTA -->
-    </div>
-</section>
+    </section>
 
 <!-- =====================================================
      SOBRE
      ===================================================== -->
-<section class="sobre">
-    <!-- Seção institucional -->
-
-    <div class="container sobre-grid">
-        <!-- Grid da seção -->
-
-        <div>
-            <h2>Sobre a Nordeste Ferramentas</h2>
-
-            <p>
-                Somos uma empresa especializada em locação de ferramentas e
-                equipamentos para construção, manutenção e projetos industriais.
-            </p>
-
-            <ul>
-                <li>✔ Equipamentos de qualidade</li>
-                <li>✔ Suporte técnico especializado</li>
-                <li>✔ Entrega e retirada no local</li>
-                <li>✔ Preços competitivos</li>
-            </ul>
-
-            <a class="btn-secondary" href="#">
-                Fale Conosco
-            </a>
+<section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2 class="section-title">Sobre a Nordeste Ferramentas</h2>
+                    <p class="sobre-description">
+                        Somos uma empresa especializada em locação de ferramentas e equipamentos 
+                        para construção, manutenção e projetos industriais. Com anos de experiência 
+                        no mercado, oferecemos soluções completas para suas necessidades.
+                    </p>
+                    
+                    <div class="sobre-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Equipamentos de qualidade</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Suporte técnico especializado</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Entrega e retirada no local</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Preços competitivos</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contato" class="btn btn-outline"> <!--O botão tem que levar direto pao whats da empresa-->
+                        <i class="fas fa-phone"></i>
+                        Fale Conosco
+                    </a>
+                </div>
+                
+                <div class="sobre-image">
+                    <img src="images/img_sobre_equipe.png" alt="Equipe Nordeste Ferramentas" class="sobre-img">
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- =====================================================
      CONTATO
      ===================================================== -->
-<section class="contato">
-    <!-- Seção de contato -->
-
-    <div class="container contato-grid">
-
-        <div class="info">
-            <!-- Informações da empresa -->
-
-            <h2>Entre em Contato</h2>
-            <p>Estamos aqui para ajudar com suas necessidades</p>
-
-            <p><strong>Telefone:</strong> (81) 99560-7222</p>
-            <p><strong>Email:</strong> contato@nordesteferramentas.com</p>
-            <p><strong>Endereço:</strong> Av. Barão de Souza Leão, 1496 - Recife/PE</p>
-            <p><strong>Horário:</strong> Seg a Sex 8h às 18h | Sáb 8h às 12h</p>
+<section class="contato" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Estamos aqui para ajudar com suas necessidades</p>
+            </div>
+            
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(81) 99560-7222</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contato-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contato@nordesteferramentas.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contato-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Av. Barão de Souza Leão, 1496 <br>Recife-PE</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contato-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contato-form">
+                    <form id="contato-form">
+                        <div class="form-group">
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Seu email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="assunto" name="assunto" required>
+                                <option value="">Selecione o assunto</option>
+                                <option value="orcamento">Orçamento</option>
+                                <option value="duvida">Dúvida</option>
+                                <option value="sugestao">Sugestão</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <form class="form">
-            <!-- Formulário -->
-
-            <input type="text" placeholder="Seu nome">
-            <input type="email" placeholder="Seu email">
-            <input type="text" placeholder="Seu telefone">
-
-            <select>
-                <option>Selecione o assunto</option>
-            </select>
-
-            <textarea placeholder="Sua mensagem"></textarea>
-
-            <button class="btn-primary">
-                Enviar Mensagem
-            </button>
-        </form>
-    </div>
-</section>
+<!-- =====================================================
+   FOOTER
+   ===================================================== -->
+   <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Nordeste Ferramentas" class="footer-logo-img">
+                        <h3>Nordeste Ferramentas</h3>
+                    </div>
+                    <p>Sua parceira em ferramentas e locação. Qualidade e confiança para seu negócio.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4> <!-- Edição para links rapidos no js-->
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="portal/">Portal de Locação</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Serviços</h4>
+                    <ul class="footer-links">
+                        <li><a href="#equipamentos">Ferramentas Manuais</a></li>
+                        <li><a href="#equipamentos">Máquinas Elétricas</a></li>
+                        <li><a href="#equipamentos">Equipamentos Pesados</a></li>
+                        <li><a href="#equipamentos">EPIs e Segurança</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nordeste Ferramentas. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
