@@ -29,7 +29,6 @@ HTML-CSS/
 
 └── Modulo 5/
 
-├── Projetos
 
 Cada pasta contém:
 
@@ -39,7 +38,6 @@ Cada pasta contém:
 
 🎯 Objetivo do Repositório
 
-📄 Projetos em html, css e js
 
 Consolidar meu aprendizado autodidata em HTML e CSS.
 
